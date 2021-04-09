@@ -10,13 +10,28 @@ using System.Windows.Forms;
 
 namespace PassaParola
 {
-    public partial class Form1 : Form
+    public partial class passaparola : Form
     {
-        public Form1()
+        public passaparola()
         {
             InitializeComponent();
         }
         int soruNo = 0, dogru = 0, yanlis = 0;
+
+        private void btntry_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms[0] == this)//Uygulamanin main form'u
+            {
+                //uygulamanin ana formunu kapatirsaniz uygulama kapanir, ana formu yeniden baslatmak uygulamayi yeniden baslatmak demektir.
+                Application.Restart();
+            }
+            else
+            {
+                passaparola f = new passaparola();
+                f.Show();
+                this.Close();
+            }
+        }
 
         private void txtCevap_KeyDown(object sender, KeyEventArgs e)
         {
@@ -396,6 +411,8 @@ namespace PassaParola
             if (soruNo == 22)
             {
                 btnBasla.Enabled = false;
+                btnBasla.Visible = false;
+                btntry.Visible = true;
             }
             switch (soruNo)
             {

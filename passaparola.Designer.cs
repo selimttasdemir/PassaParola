@@ -1,7 +1,7 @@
 ﻿
 namespace PassaParola
 {
-    partial class Form1
+    partial class passaparola
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace PassaParola
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(passaparola));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -56,6 +56,7 @@ namespace PassaParola
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btntry = new System.Windows.Forms.Button();
             this.btnBasla = new System.Windows.Forms.Button();
             this.txtCevap = new System.Windows.Forms.TextBox();
             this.lblYanlis = new System.Windows.Forms.Label();
@@ -317,6 +318,7 @@ namespace PassaParola
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btntry);
             this.groupBox2.Controls.Add(this.btnBasla);
             this.groupBox2.Controls.Add(this.txtCevap);
             this.groupBox2.Location = new System.Drawing.Point(383, 171);
@@ -325,6 +327,17 @@ namespace PassaParola
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cevap";
+            // 
+            // btntry
+            // 
+            this.btntry.Location = new System.Drawing.Point(61, 72);
+            this.btntry.Name = "btntry";
+            this.btntry.Size = new System.Drawing.Size(155, 30);
+            this.btntry.TabIndex = 30;
+            this.btntry.Text = "YENİDEN BAŞLA";
+            this.btntry.UseVisualStyleBackColor = true;
+            this.btntry.Visible = false;
+            this.btntry.Click += new System.EventHandler(this.btntry_Click);
             // 
             // btnBasla
             // 
@@ -386,7 +399,7 @@ namespace PassaParola
             this.label1.TabIndex = 26;
             this.label1.Text = "Doğru: ";
             // 
-            // Form1
+            // passaparola
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -426,7 +439,7 @@ namespace PassaParola
             this.Margin = new System.Windows.Forms.Padding(5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "passaparola";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PassaParola";
             this.groupBox1.ResumeLayout(false);
@@ -471,6 +484,7 @@ namespace PassaParola
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblDogru;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btntry;
     }
 }
 
